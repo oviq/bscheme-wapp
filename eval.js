@@ -1,8 +1,35 @@
+const break_up = (text, characters) => {
+	let out = []
+	out.push("")
+
+	let current_word = 0;
+	for(let i = 0; i<text.length; i++){
+		let add = 0
+
+		for(let c of characters){
+			if(text[i] == c){
+				current_word++
+				out.push("")
+				add = 1
+				break
+			}
+		}
+
+		out[current_word] += text[i]
+		if (add == 1){
+			out.push("")
+			current_word++
+		}
+	}
+
+	return out		
+}
+
 class Variable{
 	constructor(name, value){
 		this.name = name
-    this.value = value
-  }
+    		this.value = value
+  	}
 }
 
 let variables = []

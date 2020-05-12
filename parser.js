@@ -1,5 +1,6 @@
 const REGEX='/^[^a-zA-Z]*$/'
 
+/*
 let variables = []
 
 class Variable{
@@ -28,6 +29,7 @@ class Int extends Variable{
 		}
 	}
 }
+*/
 
 // HELPER FUNCTIONS
 const hasNumbers = (input) => {
@@ -116,6 +118,7 @@ const process = (expression) => {
 }
 
 // PARSE FUNCTION
+/*
 const parse = (text) => {
 	// trims expressions and makes them separate words
 	let trimed_text=text.trim()
@@ -128,3 +131,4 @@ const parse = (text) => {
 		process(expression)
 	}
 }
+*/
