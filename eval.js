@@ -32,7 +32,10 @@ class Variable{
   	}
 }
 
+// global thing to store all variables
 let variables = []
+
+// ... and it's functions
 const get_variable = (name) => {
 	for (let el of variables){
 		if (el.name == name){
@@ -43,8 +46,12 @@ const get_variable = (name) => {
 	return 0
 }
 
+const add_variable = (name, value) => {
+	variables.push(new Variable(name, value))
+}
+
 const eval_variables = (expression) => {
-	expression = expression.split(' ')
+	expression = break_up(expression, ' ')
 	let out = []
 	for (word of expression){
 		if(get_variable(word) != 0){
@@ -56,8 +63,4 @@ const eval_variables = (expression) => {
 	}
 	
 	return out.join(' ')
-}
-
-const parse = (text) => {
-	return eval(text)
 }
